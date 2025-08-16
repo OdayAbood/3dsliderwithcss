@@ -1,0 +1,127 @@
+body{
+    height: 1500px;
+}
+.container {
+    position: relative;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+.spiner{
+    position: absolute;
+    transition: transform 3s;
+    transform-style: preserve-3d;  
+    transform:perspective(1000px) translateY(125px);
+    width: 200px;
+    height: 250px;
+    left:calc(50% - 100px);
+    top:10%;
+    animation: autorun 20s linear infinite;
+}
+@keyframes autorun {
+    from{
+        transform: perspective(1000px) translateY(125px) rotateY(0deg) ;
+    }
+    to{
+        transform: perspective(1000px) translateY(125px) rotateY(360deg) ;
+    }
+}
+.img{
+    position: absolute;
+    inset:  0 0 0 0 ;
+    width:100px;
+    height:150px;
+}
+.img:nth-of-type(1){
+    transform:  rotatey(0deg) translateZ(500px);
+}
+.img:nth-of-type(2){
+    transform: rotateY(36deg) translateZ(500px);
+}
+.img:nth-of-type(3){
+    transform: rotateY(72deg) translateZ(500px);
+}
+.img:nth-of-type(4){
+    transform: rotateY(108deg) translateZ(500px);
+}
+.img:nth-of-type(5){
+    transform: rotatey(144deg) translateZ(500px);
+}
+.img:nth-of-type(6){
+    transform: rotatey(180deg) translateZ(500px);
+}
+.img:nth-of-type(7){
+    transform: rotateY(216deg) translateZ(500px);
+}
+.img:nth-of-type(8){
+    transform: rotateY(252deg) translateZ(500px);
+}
+.img:nth-of-type(9){
+    transform: rotatey(288deg) translateZ(500px);
+}
+.img:nth-of-type(10){
+    transform: rotatey(324deg) translateZ(500px);
+}
+.img img{
+    width:100px;
+    height:150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.big{
+    background-color: #bc2323;
+    box-shadow: 2px 1px 19px 150px #bc2323;
+    width:100px;
+    height: 150px;
+    margin-left: 50%;
+    margin-top: 250px;
+}
+.cube{
+    position: relative;
+    margin-top: 250px;
+    transform: perspective(300px);
+    transform-style: preserve-3d;
+    width: 100px;
+    height: 150px;
+    box-shadow: 2px 1px 19px  #bc2323;
+    background-color: #ffffffc9;
+    animation: get 5s linear infinite;
+}
+@keyframes get {
+    from{
+        transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(300px) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.face{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+}
+.face:nth-of-type(1){
+    transform: translateZ(150px) rotatey(0deg);
+}
+.face:nth-of-type(2){
+    transform: translateZ(150px) rotatey(60deg);
+}
+.face:nth-of-type(3){
+    transform: translateZ(150px) rotatey(120deg);
+}
+.face:nth-of-type(4){
+    transform: translateZ(150px) rotatey(180deg);
+}
+.face:nth-of-type(5){
+    transform: translateZ(150px) rotatey(240deg);
+}
+.face:nth-of-type(6){
+    transform: translateZ(150px) rotatey(300deg);
+}
+
+.face img{
+    width: 50px;
+    height: 100px;
+}
